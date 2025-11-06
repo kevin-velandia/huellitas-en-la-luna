@@ -20,7 +20,7 @@ if (isset($_SESSION['exito'])) {
 ?>
 
 <style>
-     :root {
+    :root {
         --primary-color: #2e8b57; /* Verde bosque */
         --secondary-color: #ff8c42; /* Naranja cálido */
         --dark-color: #333;
@@ -32,12 +32,12 @@ if (isset($_SESSION['exito'])) {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         line-height: 1.6;
         color: var(--dark-color);
-        background-color: var(--light-color); /* Changed to beige claro */
+        background-color: var(--light-color);
     }
 
     .btn {
         display: inline-block;
-        background: var(--primary-color); /* Verde bosque */
+        background: var(--primary-color);
         color: white;
         padding: 0.8rem 1.5rem;
         border: none;
@@ -93,6 +93,9 @@ if (isset($_SESSION['exito'])) {
         width: 100%;
         max-width: 500px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
     }
     
     .donation-option:hover {
@@ -155,6 +158,7 @@ if (isset($_SESSION['exito'])) {
         text-align: center;
         width: 100%;
         transition: background 0.3s ease, transform 0.2s ease;
+        margin-top: auto;
     }
     
     .btn-donate:hover {
@@ -191,6 +195,7 @@ if (isset($_SESSION['exito'])) {
     .donation-icon img {
         width: 80px;
         height: auto;
+        border-radius: 10px;
     }
     
     .file-upload {
@@ -206,15 +211,71 @@ if (isset($_SESSION['exito'])) {
     .file-upload input[type="file"] {
         padding: 0.5rem;
     }
+
+    /* Nuevos estilos para nivelar las secciones */
+    .donation-options-leveled {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 2rem;
+        margin: 3rem 0;
+    }
+    
+    .donation-card {
+        flex: 1;
+        max-width: 500px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        padding: 2.5rem;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .donation-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+    
+    .card-header {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--primary-color);
+    }
+    
+    .card-header h2 {
+        color: var(--primary-color);
+        font-size: 1.8rem;
+        margin: 1rem 0 0.5rem 0;
+    }
+    
+    .card-header .donation-description {
+        color: var(--dark-color);
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+    
+    .donation-form {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .form-content {
+        flex: 1;
+    }
     
     @media (max-width: 768px) {
-        .donation-options {
+        .donation-options-leveled {
             flex-direction: column;
             align-items: center;
         }
         
-        .donation-option {
+        .donation-card {
             width: 90%;
+            max-width: 100%;
         }
         
         h1.donation-title {
@@ -235,55 +296,67 @@ if (isset($_SESSION['exito'])) {
 <div class="donation-container">
     <h1 class="donation-title">Realiza tu Donación</h1>
     
-    <div class="donation-option">
-    <div class="donation-icon">
-        <img src="assets/img/donaciones/donaciones-1.jpg" alt="Donación monetaria">
-    </div>
-    <h2>Donación Monetaria</h2>
-    <!-- El action apunta al script que crearemos a continuación -->
-    <form action="procesar_donaciones.php" method="post">
-        <input type="hidden" name="tipo" value="monetaria">
-        <div class="form-group">
-            <label for="monto">Monto ($):</label>
-            <input type="number" id="monto" name="monto" min="1" step="0.01" placeholder="Ej: 50.00" required>
-        </div>
-        <button type="submit" class="btn-donate">Donar ahora</button>
-    </form>
-</div>
-        
-        <div class="donation-option">
-            <div class="donation-icon">
-                <img src="assets/img/donaciones/donaciones-2.jpg" alt="Donación en especie">
+    <div class="donation-options-leveled">
+        <!-- Donación Monetaria -->
+        <div class="donation-card">
+            <div class="card-header">
+                <div class="donation-icon">
+                    <img src="assets/img/donaciones/donaciones-1.jpg" alt="Donación monetaria">
+                </div>
+                <h2>Donación Monetaria</h2>
+                <p class="donation-description">Contribuye con apoyo económico directo</p>
             </div>
-            <h2>Donación en Especie</h2>
-            <form action="procesar_donaciones.php" method="post" enctype="multipart/form-data">
+            <form action="procesar_donaciones.php" method="post" class="donation-form">
+                <input type="hidden" name="tipo" value="monetaria">
+                <div class="form-content">
+                    <div class="form-group">
+                        <label for="monto">Monto ($):</label>
+                        <input type="number" id="monto" name="monto" min="1" step="0.01" placeholder="Ej: 50.00" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-donate">Donar ahora</button>
+            </form>
+        </div>
+
+        <!-- Donación en Especie -->
+        <div class="donation-card">
+            <div class="card-header">
+                <div class="donation-icon">
+                    <img src="assets/img/donaciones/donaciones-2.jpg" alt="Donación en especie">
+                </div>
+                <h2>Donación en Especie</h2>
+                <p class="donation-description">Contribuye con alimentos y suministros</p>
+            </div>
+            <form action="procesar_donaciones.php" method="post" enctype="multipart/form-data" class="donation-form">
                 <input type="hidden" name="tipo" value="especie">
-                <div class="form-group">
-                    <label for="tipo_especie">Tipo de donación:</label>
-                    <select id="tipo_especie" name="tipo_especie" required>
-                        <option value="">Seleccione un tipo</option>
-                        <option value="comida">Comida para animales</option>
-                        <option value="medicamentos">Medicamentos</option>
-                        <option value="accesorios">Accesorios</option>
-                        <option value="otros">Otros</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="descripcion">Descripción:</label>
-                    <textarea id="descripcion" name="descripcion" placeholder="Describa los artículos que desea donar" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="cantidad">Cantidad:</label>
-                    <input type="number" id="cantidad" name="cantidad" min="1" placeholder="Ej: 5" required>
-                </div>
-                <div class="form-group">
-                    <label for="unidad">Unidad de medida:</label>
-                    <input type="text" id="unidad" name="unidad" placeholder="Ej: kg, unidades, litros" value="unidades">
-                </div>
-                <div class="form-group file-upload">
-                    <label for="comprobante">Comprobante (opcional):</label>
-                    <input type="file" id="comprobante" name="comprobante" accept=".jpg,.jpeg,.png,.pdf">
-                    <small class="text-muted">Formatos aceptados: JPG, PNG, PDF (max 2MB)</small>
+                <div class="form-content">
+                    <div class="form-group">
+                        <label for="tipo_especie">Tipo de donación:</label>
+                        <select id="tipo_especie" name="tipo_especie" required>
+                            <option value="">Seleccione un tipo</option>
+                            <option value="comida">Comida para animales</option>
+                            <option value="medicamentos">Medicamentos</option>
+                            <option value="accesorios">Accesorios</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción:</label>
+                        <textarea id="descripcion" name="descripcion" placeholder="Describa los artículos que desea donar" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="cantidad">Cantidad:</label>
+                        <input type="number" id="cantidad" name="cantidad" min="1" placeholder="Ej: 5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="unidad">Unidad de medida:</label>
+                        <input type="text" id="unidad" name="unidad" placeholder="Ej: kg, unidades, litros" value="unidades">
+                    </div>
+                    <div class="form-group file-upload">
+                        <label for="comprobante">Comprobante (opcional):</label>
+                        <input type="file" id="comprobante" name="comprobante" accept=".jpg,.jpeg,.png,.pdf">
+                        <small class="text-muted">Formatos aceptados: JPG, PNG, PDF (max 2MB)</small>
+                    </div>
                 </div>
                 <button type="submit" class="btn-donate">Enviar donación</button>
             </form>

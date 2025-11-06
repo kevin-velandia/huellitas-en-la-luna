@@ -19,8 +19,8 @@ if (!isset($_POST['monto']) || !is_numeric($_POST['monto']) || $_POST['monto'] <
 // -----------------------------------------------------------------
 
 // 3. Incluir el SDK de MercadoPago y la configuración
-require_once './vendor/autoload.php'; // <-- ESTA LÍNEA CARGA LA LIBRERÍA
-require_once 'config.php';           // <-- ESTA LÍNEA CARGA TU TOKEN
+require_once './vendor/autoload.php'; // carga la librería instalada por Composer
+require_once 'config.php';           // carga tu token ($accessToken) u otras configuraciones
 
 // -----------------------------------------------------------------
 
@@ -29,30 +29,53 @@ $monto_donacion = (float)$_POST['monto'];
 
 try {
     // 5. Configurar el SDK con tu Access Token
-    // ESTA LÍNEA (la 25 en tu error) AHORA FUNCIONARÁ PORQUE LA CLASE YA FUE CARGADA
-    MercadoPago\SDK::setAccessToken($accessToken);
-    
+    // En la versión del SDK incluido aquí la clase de configuración es
+    // MercadoPago\MercadoPagoConfig (no existe MercadoPago\SDK)
+    MercadoPago\MercadoPagoConfig::setAccessToken($accessToken);
 
-    // 6. Crear la preferencia de pago
-    $preference = new MercadoPago\Preference();
 
-    // ... el resto del código para crear el item y la preferencia ...
-    $item = new MercadoPago\Item();
-    $item->title = 'Donación para nuestra causa';
-    $item->quantity = 1;
-    $item->unit_price = $monto_donacion;
-    $item->currency_id = "COP"; // Cambia a tu moneda
+    // 6. Crear la preferencia de pago usando el cliente del SDK
+    $preferenceClient = new MercadoPago\Client\Preference\PreferenceClient();
 
-    $preference->items = array($item);
+    // URLs de retorno necesarias cuando usas auto_return
+    $backUrlBase = 'http://localhost/petlove';
 
-  
-    $preference->auto_return = "approved";
+    // Si estamos en localhost, Mercado Pago puede rechazar auto_return/back_urls en algunos casos.
+    $isLocalhost = str_contains($backUrlBase, 'localhost') || str_contains($backUrlBase, '127.0.0.1');
 
-    $preference->save();
+    $request = [
+        'items' => [
+            [
+                'title' => 'Donación para nuestra causa',
+                'quantity' => 1,
+                'unit_price' => $monto_donacion,
+                'currency_id' => 'COP'
+            ]
+        ],
+        'back_urls' => [
+            'success' => $backUrlBase . '/confirmacion_donaciones.php',
+            'failure' => $backUrlBase . '/donaciones.php',
+            'pending' => $backUrlBase . '/confirmacion_donaciones.php'
+        ]
+    ];
 
+    // Añadir auto_return sólo si no estamos en localhost (evita el error invalid_auto_return en dev)
+    if (!$isLocalhost) {
+        $request['auto_return'] = 'approved';
+    }
+
+    // Crear la preferencia en la API
+    $preference = $preferenceClient->create($request);
+
+    // Redirigir al usuario al checkout
     header("Location: " . $preference->init_point);
     exit();
 
+} catch (MercadoPago\Exceptions\MPApiException $e) {
+    // Mostrar detalles de la respuesta de la API para depurar
+    $status = $e->getStatusCode();
+    $apiResponse = $e->getApiResponse()->getContent();
+    echo "Error al procesar el pago: Api error (HTTP $status). Detalles: " . json_encode($apiResponse);
 } catch (Exception $e) {
     echo 'Error al procesar el pago: ' . $e->getMessage();
 }
