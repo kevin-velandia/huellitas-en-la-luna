@@ -12,6 +12,7 @@
     "autoload-dev": {
         "psr-4": {
             "MercadoPago\\Tests\\": "tests/MercadoPago/"
+            
         }
     },
     "require": {
