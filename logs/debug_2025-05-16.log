@@ -1,0 +1,296 @@
+[2025-05-16 06:21:37][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:58] Datos recibidos POST: Array
+(
+    [nombre] => Admin Nuevo
+    [email] => adminnuevo@fundacion.com
+    [telefono] => 3158301742
+    [biografia] => 
+)
+
+[2025-05-16 06:21:37][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:59] Datos recibidos FILES: Array
+(
+    [foto] => Array
+        (
+            [name] => 
+            [full_path] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+
+[2025-05-16 06:21:37][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:60] Datos de sesión: Array
+(
+    [id] => 11
+    [nombre] => Admin Nuevo
+    [email] => adminnuevo@fundacion.com
+    [password] => $2y$10$QA./HTZoG6SlB049vHKj7.nIpoXsVUFT93pz7.9OQEUKKP2bKWAum
+    [telefono] => 987654321
+    [direccion] => Sede central de la fundación
+    [rol] => admin
+    [fecha_registro] => 2025-05-15 11:36:19
+)
+
+[2025-05-16 06:21:37][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:245] ERROR: Unknown column 'biografia' in 'field list'
+Trace: #0 C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php(189): mysqli->prepare('UPDATE usuarios...')
+#1 {main}
+[2025-05-16 06:21:38][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:58] Datos recibidos POST: Array
+(
+    [nombre] => Admin Nuevo
+    [email] => adminnuevo@fundacion.com
+    [telefono] => 987654321
+    [biografia] => 
+)
+
+[2025-05-16 06:21:38][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:59] Datos recibidos FILES: Array
+(
+    [foto] => Array
+        (
+            [name] => 
+            [full_path] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+
+[2025-05-16 06:21:38][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:60] Datos de sesión: Array
+(
+    [id] => 11
+    [nombre] => Admin Nuevo
+    [email] => adminnuevo@fundacion.com
+    [password] => $2y$10$QA./HTZoG6SlB049vHKj7.nIpoXsVUFT93pz7.9OQEUKKP2bKWAum
+    [telefono] => 987654321
+    [direccion] => Sede central de la fundación
+    [rol] => admin
+    [fecha_registro] => 2025-05-15 11:36:19
+)
+
+[2025-05-16 06:21:38][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:245] ERROR: Unknown column 'biografia' in 'field list'
+Trace: #0 C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php(189): mysqli->prepare('UPDATE usuarios...')
+#1 {main}
+[2025-05-16 06:28:14][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:58] Datos recibidos POST: Array
+(
+    [nombre] => Admin Nuevo
+    [email] => adminnuevo@fundacion.com
+    [telefono] => 3158301742
+    [biografia] => 
+)
+
+[2025-05-16 06:28:14][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:59] Datos recibidos FILES: Array
+(
+    [foto] => Array
+        (
+            [name] => 
+            [full_path] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+
+[2025-05-16 06:28:14][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:60] Datos de sesión: Array
+(
+    [id] => 11
+    [nombre] => Admin Nuevo
+    [email] => adminnuevo@fundacion.com
+    [password] => $2y$10$QA./HTZoG6SlB049vHKj7.nIpoXsVUFT93pz7.9OQEUKKP2bKWAum
+    [telefono] => 987654321
+    [direccion] => Sede central de la fundación
+    [rol] => admin
+    [fecha_registro] => 2025-05-15 11:36:19
+)
+
+[2025-05-16 06:28:14][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:245] ERROR: Unknown column 'biografia' in 'field list'
+Trace: #0 C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php(189): mysqli->prepare('UPDATE usuarios...')
+#1 {main}
+[2025-05-16 06:28:15][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:58] Datos recibidos POST: Array
+(
+    [nombre] => Admin Nuevo
+    [email] => adminnuevo@fundacion.com
+    [telefono] => 987654321
+    [biografia] => 
+)
+
+[2025-05-16 06:28:15][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:59] Datos recibidos FILES: Array
+(
+    [foto] => Array
+        (
+            [name] => 
+            [full_path] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+
+[2025-05-16 06:28:15][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:60] Datos de sesión: Array
+(
+    [id] => 11
+    [nombre] => Admin Nuevo
+    [email] => adminnuevo@fundacion.com
+    [password] => $2y$10$QA./HTZoG6SlB049vHKj7.nIpoXsVUFT93pz7.9OQEUKKP2bKWAum
+    [telefono] => 987654321
+    [direccion] => Sede central de la fundación
+    [rol] => admin
+    [fecha_registro] => 2025-05-15 11:36:19
+)
+
+[2025-05-16 06:28:15][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:245] ERROR: Unknown column 'biografia' in 'field list'
+Trace: #0 C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php(189): mysqli->prepare('UPDATE usuarios...')
+#1 {main}
+[2025-05-16 06:31:08][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:58] Datos recibidos POST: Array
+(
+    [nombre] => Admin Nuevo
+    [email] => adminnuevo@fundacion.com
+    [telefono] => 3158301742
+    [biografia] => 
+)
+
+[2025-05-16 06:31:08][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:59] Datos recibidos FILES: Array
+(
+    [foto] => Array
+        (
+            [name] => 
+            [full_path] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+
+[2025-05-16 06:31:08][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:60] Datos de sesión: Array
+(
+    [id] => 11
+    [nombre] => Admin Nuevo
+    [email] => adminnuevo@fundacion.com
+    [password] => $2y$10$QA./HTZoG6SlB049vHKj7.nIpoXsVUFT93pz7.9OQEUKKP2bKWAum
+    [telefono] => 987654321
+    [direccion] => Sede central de la fundación
+    [rol] => admin
+    [fecha_registro] => 2025-05-15 11:36:19
+)
+
+[2025-05-16 06:31:08][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:245] ERROR: Unknown column 'biografia' in 'field list'
+Trace: #0 C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php(189): mysqli->prepare('UPDATE usuarios...')
+#1 {main}
+[2025-05-16 06:31:09][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:58] Datos recibidos POST: Array
+(
+    [nombre] => Admin Nuevo
+    [email] => adminnuevo@fundacion.com
+    [telefono] => 987654321
+    [biografia] => 
+)
+
+[2025-05-16 06:31:09][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:59] Datos recibidos FILES: Array
+(
+    [foto] => Array
+        (
+            [name] => 
+            [full_path] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+
+[2025-05-16 06:31:09][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:60] Datos de sesión: Array
+(
+    [id] => 11
+    [nombre] => Admin Nuevo
+    [email] => adminnuevo@fundacion.com
+    [password] => $2y$10$QA./HTZoG6SlB049vHKj7.nIpoXsVUFT93pz7.9OQEUKKP2bKWAum
+    [telefono] => 987654321
+    [direccion] => Sede central de la fundación
+    [rol] => admin
+    [fecha_registro] => 2025-05-15 11:36:19
+)
+
+[2025-05-16 06:31:09][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:245] ERROR: Unknown column 'biografia' in 'field list'
+Trace: #0 C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php(189): mysqli->prepare('UPDATE usuarios...')
+#1 {main}
+[2025-05-16 06:42:27][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:58] Datos recibidos POST: Array
+(
+    [nombre] => Admin Nuevo
+    [email] => adminnuevo@fundacion.com
+    [telefono] => 3158301742
+    [biografia] => 
+)
+
+[2025-05-16 06:42:27][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:59] Datos recibidos FILES: Array
+(
+    [foto] => Array
+        (
+            [name] => 
+            [full_path] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+
+[2025-05-16 06:42:27][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:60] Datos de sesión: Array
+(
+    [id] => 11
+    [nombre] => Admin Nuevo
+    [email] => adminnuevo@fundacion.com
+    [password] => $2y$10$QA./HTZoG6SlB049vHKj7.nIpoXsVUFT93pz7.9OQEUKKP2bKWAum
+    [telefono] => 987654321
+    [direccion] => Sede central de la fundación
+    [rol] => admin
+    [fecha_registro] => 2025-05-15 11:36:19
+)
+
+[2025-05-16 06:42:27][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:245] ERROR: Unknown column 'biografia' in 'field list'
+Trace: #0 C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php(189): mysqli->prepare('UPDATE usuarios...')
+#1 {main}
+[2025-05-16 06:42:28][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:58] Datos recibidos POST: Array
+(
+    [nombre] => Admin Nuevo
+    [email] => adminnuevo@fundacion.com
+    [telefono] => 987654321
+    [biografia] => 
+)
+
+[2025-05-16 06:42:28][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:59] Datos recibidos FILES: Array
+(
+    [foto] => Array
+        (
+            [name] => 
+            [full_path] => 
+            [type] => 
+            [tmp_name] => 
+            [error] => 4
+            [size] => 0
+        )
+
+)
+
+[2025-05-16 06:42:28][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:60] Datos de sesión: Array
+(
+    [id] => 11
+    [nombre] => Admin Nuevo
+    [email] => adminnuevo@fundacion.com
+    [password] => $2y$10$QA./HTZoG6SlB049vHKj7.nIpoXsVUFT93pz7.9OQEUKKP2bKWAum
+    [telefono] => 987654321
+    [direccion] => Sede central de la fundación
+    [rol] => admin
+    [fecha_registro] => 2025-05-15 11:36:19
+)
+
+[2025-05-16 06:42:29][C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php:245] ERROR: Unknown column 'biografia' in 'field list'
+Trace: #0 C:\xampp\htdocs\petlove\admin\procesar_editar_perfil.php(189): mysqli->prepare('UPDATE usuarios...')
+#1 {main}

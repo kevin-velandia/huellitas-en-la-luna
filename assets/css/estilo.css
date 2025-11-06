@@ -1,0 +1,334 @@
+/* Estilos generales */
+
+
+header {
+  background-color: #A4B465;
+  color: #F0BB78;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*BOTONES HEADER*/
+.navbar-custom .nav-link.btn:hover {
+  background-color: rgba(92, 217, 90, 0.947) !important;
+  color: #F0BB78 !important;
+  transform: scale(1.05);
+}
+
+/*BOTON INICIO SESION*/
+.navbar-custom .btn-outline-success {
+  transition: all 0.3s ease;
+}
+
+/* ZOOM */
+.zoom-effect {
+  transition: transform 0.3s ease;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .info-section {
+      background: white;
+      text-align: center;
+  }
+  
+  .carousel-caption {
+      bottom: 20px;
+  }
+  
+  .carousel-caption .btn {
+      font-size: 14px;
+      padding: 5px 10px;
+  }
+}
+
+.navbar-custom .btn-outline-success:hover {
+  background-color: rgba(92, 217, 90, 0.947) !important;
+  color: #F0BB78 !important;
+  transform: scale(1.05);
+}
+
+.navbar-custom {
+  background: linear-gradient(135deg, #F5ECD5 0%, #eaf6eb 100%) !important;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  background-color: #f4f4f4;
+  padding: 3rem;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  background: #F5ECD5;
+  color: #74512D;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Estilos para tarjetas de animales */
+.animales-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.animal-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.animal-card:hover {
+  transform: translateY(-5px);
+}
+
+.animal-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.animal-card h3 {
+  padding: 0 1rem;
+}
+
+.animal-card p {
+  padding: 0 1rem 1rem;
+}
+
+/* Estilos para el panel de administración */
+.dashboard {
+  padding: 2rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.stat-card {
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin-top: 0;
+  color: #666;
+}
+
+.stat-card p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0 0;
+  color: #F0BB78;
+}
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.bg-custom {
+  background-color: #F0BB78; /* Verde PetLove */
+  /* Para un gradiente: */
+  background: linear-gradient(135deg, #4CAF50 0%, #3e8e41 100%);
+}
+
+/* Espaciados generales */
+.header-spacer {
+  margin-top: 30px;
+}
+
+.footer-spacer {
+  margin-bottom: 50px;
+}
+
+/* Ajustes para el login page */
+.login-page {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  min-height: calc(100vh - 160px); /* Ajusta según altura de header/footer */
+}
+
+/* Asegurar que el footer siempre abajo */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-page {
+      padding: 1rem;
+  }
+  
+  .login-card {
+      margin-top: 2rem;
+  }
+}
+
+:root {
+  --primary: #ff6b6b;
+  --secondary: #4ecdc4;
+  --dark: #292f36;
+  --light: #f7fff7;
+  --accent: #ff9f1c;
+  --gray: #6c757d;
+}
+
+
+
+h1, h2, h3 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+}
+
+.site-header {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.logo span {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.main-content {
+  padding: 2rem 0;
+}
+
+h1 {
+  color: var(--primary);
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: var(--secondary);
+  margin: 10px auto;
+}
+
+.animales-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.animal-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.animal-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.animal-card h3 {
+  color: var(--primary);
+  margin: 1rem 1rem 0.5rem;
+}
+
+.animal-card p {
+  margin: 0.3rem 1rem;
+  color: var(--gray);
+}
+
+.animal-card .btn {
+  display: block;
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 0.75rem;
+  margin: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.animal-card .btn:hover {
+  background: #ff5252;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+  .animales-grid {
+      grid-template-columns: 1fr;
+  }
+  
+  .logo span {
+      font-size: 1.2rem;
+  }
+}
+
+

@@ -1,0 +1,3 @@
+<?php
+$accessToken = "APP_USR-3498015940867837-110512-aa8fd33d80cdc44fadbd1c9ea8381c7b-2968735745";
+?>
